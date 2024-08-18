@@ -17,7 +17,7 @@ function Login() {
     }).then((res)=>{
       localStorage.setItem('userInfo',JSON.stringify(res.data))
       toast.error(res.data?.message)
-      window.location.reload()
+      navigate('/')
     }).catch((error)=>{
       console.log(error);
     })
